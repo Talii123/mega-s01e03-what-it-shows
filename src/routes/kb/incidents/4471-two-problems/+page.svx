@@ -1,0 +1,42 @@
+---
+layout: runbook
+title: '#4471 · two problems, not one'
+owner: Talii123
+status: draft
+reviewed: 2026-11-05
+signature: Talii123
+---
+
+<script>
+  import CauseTable from '#lib/kb/CauseTable.svelte';
+  import Callout from '#lib/kb/Callout.svelte';
+  import RenderStamp from '#lib/kb/RenderStamp.svelte';
+</script>
+
+[#4471](/kb/incidents/4471) merged every date report into one ticket. Grouped by the tenant's
+locale and booking form, the same reports are two different bugs. The table below is built
+from the export when the page renders.
+
+<CauseTable ticket={4471} />
+
+## The two problems
+
+<strong>parser</strong>: the shared parser reads every date month first, so a day-first tenant's dates
+come out flipped. This is what #4471 describes, and it covers most of the reports. Five of them read as a
+one-day move and are counted here too.
+
+<strong>hint</strong>: tenants on the booking-v3 form see the hint MM/DD/YYYY under the date field, so
+their people type month first and the form reads it day first. This is a different bug with a
+different fix, and it has no ticket of its own on the desk.
+
+<Callout kind="warn">
+Intake's browser guess is not the cause. Some reports tagged as parser are hint reports, and the other way round.
+Count by tenant, not by tag.
+</Callout>
+
+## What to do
+
+- Keep #4471 for `parser`.
+- Open a separate ticket for `hint`.
+
+<RenderStamp {signature} />

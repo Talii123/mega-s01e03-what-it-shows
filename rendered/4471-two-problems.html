@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width" /><link href="../../_app/immutable/entry/start.D8LFzizM.js" rel="modulepreload">
+		<link href="../../_app/immutable/chunks/DLPHJf5b.js" rel="modulepreload">
+		<link href="../../_app/immutable/chunks/Ur2fhouh.js" rel="modulepreload">
+		<link href="../../_app/immutable/chunks/B3ck760V.js" rel="modulepreload">
+		<link href="../../_app/immutable/entry/app.41lHPD17.js" rel="modulepreload">
+		<link href="../../_app/immutable/chunks/BnpOIMme.js" rel="modulepreload">
+		<link href="../../_app/immutable/chunks/BG5v0sKB.js" rel="modulepreload">
+		<link href="../../_app/immutable/chunks/DzrvIRbX.js" rel="modulepreload">
+		<link href="../../_app/immutable/chunks/CyMa8FXv.js" rel="modulepreload">
+		<link href="../../_app/immutable/nodes/0.DjykM_qP.js" rel="modulepreload">
+		<link href="../../_app/immutable/chunks/DVJ5pYx9.js" rel="modulepreload">
+		<link href="../../_app/immutable/nodes/5.CI__4SH8.js" rel="modulepreload">
+		<link href="../../_app/immutable/chunks/Bw6thOuK.js" rel="modulepreload">
+		<link href="../../_app/immutable/chunks/6F5Jptlk.js" rel="modulepreload">
+		<link href="../../_app/immutable/chunks/BeNqf_tZ.js" rel="modulepreload">
+		<link href="../../_app/immutable/chunks/0CSW6DJc.js" rel="modulepreload">
+		<!--e2jw2j--><!----><title>#4471 · two problems, not one · support kb</title>
+		<link href="../../_app/immutable/assets/runbook.BhhgOc_n.css" rel="stylesheet">
+		<link href="../../_app/immutable/assets/Callout.yLErXQDM.css" rel="stylesheet">
+		<link href="../../_app/immutable/assets/CauseTable.DuKfINX_.css" rel="stylesheet">
+		<link href="../../_app/immutable/assets/5.CMZ6TBbc.css" rel="stylesheet"></head>
+<body><!--[--><!--[0--><!--[--><!--[--><div class="kb svelte-e2jw2j"><header><a class="crumb svelte-e2jw2j" href="/kb">support desk · kb</a> <h1 class="svelte-e2jw2j">#4471 · two problems, not one</h1> <p class="meta svelte-e2jw2j"><span>owner <b>Talii123</b></span> <span class="status draft svelte-e2jw2j">draft</span> <span class="svelte-e2jw2j">reviewed 2026-11-05 · 0 days ago</span></p></header> <!--[-1--><!--]--> <main><p><a href="/kb/incidents/4471">#4471</a> merged every date report into one ticket. Grouped by the tenant’s
+locale and booking form, the same reports are two different bugs. The table below is built
+from the export when the page renders.</p> <p class="sum svelte-12oyimm"><strong>412</strong> reports merged into #4471 · <strong>2</strong> causes</p> <table><thead><tr><th>cause</th><th>reports</th><th>tagged as</th><th>tenants</th><th>seen</th><th></th></tr></thead><tbody><!--[--><tr class="svelte-12oyimm"><td class="svelte-12oyimm"><code>parser</code></td><td class="svelte-12oyimm">379</td><td class="tags svelte-12oyimm">parser ×356 · hint ×23</td><td class="svelte-12oyimm">11</td><td class="svelte-12oyimm">2026-04-01 → 2026-10-04</td><td class="svelte-12oyimm">#4471</td></tr><tr class="svelte-12oyimm wrong"><td class="svelte-12oyimm"><code>hint</code></td><td class="svelte-12oyimm">33</td><td class="tags svelte-12oyimm">hint ×18 · parser ×15</td><td class="svelte-12oyimm">3</td><td class="svelte-12oyimm">2026-04-17 → 2026-09-22</td><td class="svelte-12oyimm">not this ticket — no ticket of its own</td></tr><!--]--></tbody></table> <!--[--><!--[0--><p class="note svelte-12oyimm">5 reports read as a one-day move; filed under <code>parser</code> by tenant.</p><!--]--><!--[-1--><!--]--><!--]--><!----> <h2>The two problems</h2> <strong>parser</strong>: the shared parser reads every date month first, so a day-first tenant's dates
+come out flipped. This is what #4471 describes, and it covers most of the reports. Five of them read as a
+one-day move and are counted here too. <strong>hint</strong>: tenants on the booking-v3 form see the hint MM/DD/YYYY under the date field, so
+their people type month first and the form reads it day first. This is a different bug with a
+different fix, and it has no ticket of its own on the desk. <aside class="warn svelte-17bri61"><!---->Intake's browser guess is not the cause. Some reports tagged as parser are hint reports, and the other way round.
+Count by tenant, not by tag.<!----></aside><!----> <h2>What to do</h2> <ul><li>Keep #4471 for <code>parser</code>.</li> <li>Open a separate ticket for <code>hint</code>.</li></ul> <!--[0--><p class="stamp svelte-1280m42">desk ref <b class="svelte-1280m42">DR-H73M-RB00</b></p><!--]--><!----><!----></main> <footer class="svelte-e2jw2j">Pages are written by people. Tables and charts are built from data at render time.</footer></div><!--]--><!----><!--]--><!--]--> <!--[-1--><!--]--><!--]-->
+			
+			<script>
+				{
+					__sveltekit_2m16ws = {
+						base: new URL("../..", location).pathname.slice(0, -1)
+					};
+
+					const element = document.currentScript.parentElement;
+
+					Promise.all([
+						import("../../_app/immutable/entry/start.D8LFzizM.js"),
+						import("../../_app/immutable/entry/app.41lHPD17.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 5],
+							data: [null,null],
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</body></html>
