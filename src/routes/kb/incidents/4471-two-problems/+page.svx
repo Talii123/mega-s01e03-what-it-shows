@@ -4,7 +4,7 @@ title: '#4471 · two problems, not one'
 owner: Talii123
 status: draft
 reviewed: 2026-11-05
-signature: Talii123
+signature: v1.eyJzdWIiOiIyMzg0IiwiYXVkIjoiY2hhbGxlbmdlOndoYXQtaXQtc2hvd3MiLCJpYXQiOjE3OTM5MDMwNTgsImV4cCI6MTc5Mzk4OTQ1OH0.ZEHO9wtTYV0OTcZq0didDjCuoF0Ukih4-olh9ZGiwq8
 ---
 
 <script>
